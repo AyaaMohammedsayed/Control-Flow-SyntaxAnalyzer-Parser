@@ -1,0 +1,23 @@
+digraph AST {
+  node [shape=box, style=filled, fillcolor=white];
+  node0 [label="Program"];
+  node1 [label="If"];
+  node2 [label="x>0", shape=ellipse, color=red];
+  node1 -> node2 [label="Cond"];
+  node3 [label="Block"];
+  node4 [label="If"];
+  node5 [label="y<10", shape=ellipse, color=red];
+  node4 -> node5 [label="Cond"];
+  node6 [label="Block"];
+  node7 [label="Assign"];
+  node8 [label="z", shape=note];
+  node7 -> node8 [label="Target"];
+  node9 [label="Expr"];
+  node9 [label="1", shape=plaintext];
+  node7 -> node9 [label="Expr"];
+  node6 -> node7;
+  node4 -> node6 [label="Then"];
+  node3 -> node4;
+  node1 -> node3 [label="Then"];
+  node0 -> node1;
+}
