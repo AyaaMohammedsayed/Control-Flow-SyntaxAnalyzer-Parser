@@ -9,9 +9,18 @@ digraph AST {
   node5 [label="z", shape=note];
   node4 -> node5 [label="Target"];
   node6 [label="Expr"];
-  node6 [label="1", shape=plaintext];
+node6 [label="1", shape=ellipse];
   node4 -> node6 [label="Expr"];
   node3 -> node4;
   node1 -> node3 [label="Then"];
+  node7 [label="Block"];
+  node8 [label="Assign"];
+  node9 [label="x", shape=note];
+  node8 -> node9 [label="Target"];
+  node10 [label="Expr"];
+node10 [label="9", shape=ellipse];
+  node8 -> node10 [label="Expr"];
+  node7 -> node8;
+  node1 -> node7 [label="Else"];
   node0 -> node1;
 }

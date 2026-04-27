@@ -1,0 +1,14 @@
+## For Run ANTLR
+java -jar lib/antlr-4.13.2-complete.jar -visitor -o src/parser grammar/ControlFlow.g4
+
+
+## For Compile Project 
+javac -cp ".;lib/antlr-4.13.2-complete.jar" src/*.java src/parser/*.java src/visitor/*.java src/error/*.java utils/*.java
+
+
+## For Run Project on The single input file 
+java -cp ".;lib/antlr-4.13.2-complete.jar;src" Main 
+
+## For Run Project on The single Test files 
+java -cp ".;lib/antlr-4.13.2-complete.jar;src" Main  --test
+

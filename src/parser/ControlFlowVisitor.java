@@ -43,6 +43,18 @@ public interface ControlFlowVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitBlock(ControlFlowParser.BlockContext ctx);
 	/**
+	 * Visit a parse tree produced by {@link ControlFlowParser#forInit}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitForInit(ControlFlowParser.ForInitContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link ControlFlowParser#forUpdate}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitForUpdate(ControlFlowParser.ForUpdateContext ctx);
+	/**
 	 * Visit a parse tree produced by {@link ControlFlowParser#assignment}.
 	 * @param ctx the parse tree
 	 * @return the visitor result

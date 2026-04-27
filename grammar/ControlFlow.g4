@@ -4,8 +4,10 @@ grammar ControlFlow;
     package parser;
 }
 
-program: statement+ ;
 
+program
+    : statement+ EOF
+    ;
 
 statement
     : matchedStatement
@@ -14,9 +16,9 @@ statement
 
 matchedStatement
     : IF '(' expression ')' matchedStatement ELSE matchedStatement
-    | FOR '(' assignmentStmt expression ';' assignment ')' statement
+    | FOR '(' forInit expression SEMI forUpdate ')' statement
     | block
-    | assignmentStmt 
+    | assignmentStmt
     ;
 
 unmatchedStatement
@@ -28,6 +30,16 @@ block
     : LBRACE statement* RBRACE
     ;
 
+
+forInit
+    : assignmentStmt?
+    ;
+
+forUpdate
+    : assignment?
+    ;
+
+
 assignment
     : ID ASSIGN expression
     ;
@@ -35,7 +47,6 @@ assignment
 assignmentStmt
     : assignment SEMI
     ;
-
 
 
 expression
@@ -70,6 +81,7 @@ multiplicativeExpr
 
 unaryExpr
     : NOT unaryExpr
+    | SUB unaryExpr       
     | primary
     ;
 
@@ -80,10 +92,10 @@ primary
     ;
 
 
-
 IF     : 'if' ;
 ELSE   : 'else' ;
 FOR    : 'for' ;
+
 
 OR     : '||' ;
 AND    : '&&' ;
@@ -104,6 +116,7 @@ NEQ    : '!=' ;
 
 ASSIGN : '=' ;
 SEMI   : ';' ;
+
 
 LPAREN : '(' ;
 RPAREN : ')' ;

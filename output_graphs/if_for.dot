@@ -10,7 +10,7 @@ digraph AST {
   node6 [label="j", shape=note];
   node5 -> node6 [label="Target"];
   node7 [label="Expr"];
-  node7 [label="0", shape=plaintext];
+node7 [label="0", shape=ellipse];
   node5 -> node7 [label="Expr"];
   node4 -> node5 [label="Init"];
   node8 [label="j<5", shape=ellipse];
@@ -19,7 +19,7 @@ digraph AST {
   node10 [label="j", shape=note];
   node9 -> node10 [label="Target"];
   node11 [label="Expr"];
-  node11 [label="j+1", shape=plaintext];
+node11 [label="j+1", shape=ellipse];
   node9 -> node11 [label="Expr"];
   node4 -> node9 [label="Update"];
   node12 [label="Block"];
@@ -27,7 +27,7 @@ digraph AST {
   node14 [label="count", shape=note];
   node13 -> node14 [label="Target"];
   node15 [label="Expr"];
-  node15 [label="count+1", shape=plaintext];
+node15 [label="count+1", shape=ellipse];
   node13 -> node15 [label="Expr"];
   node12 -> node13;
   node4 -> node12 [label="Body"];

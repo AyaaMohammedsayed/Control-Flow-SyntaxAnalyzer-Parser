@@ -9,7 +9,7 @@ digraph AST {
   node5 [label="status", shape=note];
   node4 -> node5 [label="Target"];
   node6 [label="Expr"];
-  node6 [label="1", shape=plaintext];
+node6 [label="1", shape=ellipse];
   node4 -> node6 [label="Expr"];
   node3 -> node4;
   node1 -> node3 [label="Then"];

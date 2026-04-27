@@ -1,8 +1,9 @@
 package visitor;
 
 public class AssignNode extends ASTNode {
+
     public String id;
-    public ExprNode expression; // تغيير النوع من String إلى ExprNode
+    public ExprNode expression;
 
     public AssignNode(String id, ExprNode expression) {
         this.id = id;
@@ -11,6 +12,6 @@ public class AssignNode extends ASTNode {
 
     @Override
     public String toString() {
-        return "Assign(" + id + ")";
+        return id + " = " + expression;
     }
 }

@@ -60,6 +60,26 @@ public interface ControlFlowListener extends ParseTreeListener {
 	 */
 	void exitBlock(ControlFlowParser.BlockContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link ControlFlowParser#forInit}.
+	 * @param ctx the parse tree
+	 */
+	void enterForInit(ControlFlowParser.ForInitContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link ControlFlowParser#forInit}.
+	 * @param ctx the parse tree
+	 */
+	void exitForInit(ControlFlowParser.ForInitContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link ControlFlowParser#forUpdate}.
+	 * @param ctx the parse tree
+	 */
+	void enterForUpdate(ControlFlowParser.ForUpdateContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link ControlFlowParser#forUpdate}.
+	 * @param ctx the parse tree
+	 */
+	void exitForUpdate(ControlFlowParser.ForUpdateContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link ControlFlowParser#assignment}.
 	 * @param ctx the parse tree
 	 */

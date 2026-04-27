@@ -2,8 +2,8 @@ package visitor;
 
 public class IfNode extends ASTNode {
     public String condition;
-    public ASTNode thenBranch; // الجزء اللي بعد الـ IF
-    public ASTNode elseBranch; // الجزء اللي بعد الـ ELSE (ممكن يكون null)
+    public ASTNode thenBranch;
+    public ASTNode elseBranch; 
 
     public IfNode(String condition, ASTNode thenBranch, ASTNode elseBranch) {
         this.condition = condition;

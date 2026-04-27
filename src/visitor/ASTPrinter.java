@@ -3,9 +3,8 @@ package visitor;
 public class ASTPrinter {
 
     public static void print(ASTNode node, String indent) {
-        if (node == null) return; // حماية من أي null pointers
+        if (node == null) return; 
 
-        // 1. Program Node (جذر الشجرة)
         if (node instanceof ProgramNode) {
             System.out.println(indent + "Program");
             for (ASTNode child : ((ProgramNode) node).statements) {
@@ -13,7 +12,6 @@ public class ASTPrinter {
             }
         } 
         
-        // 2. If Node
         else if (node instanceof IfNode) {
             IfNode ifNode = (IfNode) node;
             System.out.println(indent + "If (Condition: " + ifNode.condition + ")");
@@ -27,7 +25,6 @@ public class ASTPrinter {
             }
         }
 
-        // 3. For Node (تأكدي أن الحقول مطابقة لـ ForNode.java لديكِ)
         else if (node instanceof ForNode) {
             ForNode forNode = (ForNode) node;
             System.out.println(indent + "For (Init: " + forNode.init + 
@@ -36,7 +33,6 @@ public class ASTPrinter {
             print(forNode.body, indent + "  ");
         }
 
-        // 4. Block Node (Scope)
         else if (node instanceof BlockNode) {
             BlockNode block = (BlockNode) node;
             System.out.println(indent + "Block {");
@@ -46,7 +42,6 @@ public class ASTPrinter {
             System.out.println(indent + "}");
         }
 
-        // 5. Assignment Node
         else if (node instanceof AssignNode) {
             AssignNode assign = (AssignNode) node;
             System.out.println(indent + "Assign: " + assign.id + " = " + assign.expression);
