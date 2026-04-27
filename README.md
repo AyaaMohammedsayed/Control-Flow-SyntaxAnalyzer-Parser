@@ -87,7 +87,7 @@ else
 ---
 
 ### 🌳 Output (Graph-image)
-![AST Output](images/ast_output.png)
+![AST Output](Graph_valid_input.png)
 
 ---
 
@@ -100,7 +100,7 @@ for (i = 0 i < 10 i = i + 1)
 }
 ```
 ###  Invalid Input Screenshot 
-![Invalid Input](images/invalid_input.png)
+![Invalid Input](AST_invalid_input.png)
 
 ---
 
