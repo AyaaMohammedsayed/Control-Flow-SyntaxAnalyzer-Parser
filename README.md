@@ -81,7 +81,7 @@ else
 ---
 
 ### 🌳 Output (AST-image)
-![AST Output](images/ast_output.png)
+![AST Output](AST_valid_input.png)
 
 ---
 ---
